@@ -1,4 +1,29 @@
 ﻿<Properties StartupConfiguration="{6465CAB1-FC0B-4EDC-B3F5-AAFC80710968}|Default">
-  <MonoDevelop.Ide.ItemProperties.robotMarsAttaque FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="robotMarsAttaque/Program.cs">
+    <Files>
+      <File FileName="robotMarsAttaque/Program.cs" Line="4" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="robotMarsAttaque" expanded="True">
+            <Node name="robotMarsAttaque" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True">
+                  <Node name="Microsoft.NETCore.App" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.robotMarsAttaque PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
 </Properties>
