@@ -35,7 +35,7 @@ public class Rover
                 Position.X--;
                 break;
         }
-        AdjustForTorus();
+        Toroidale();
     }
 
     public void Reverse()
@@ -55,7 +55,7 @@ public class Rover
                 Position.X++;
                 break;
         }
-        AdjustForTorus();
+        Toroidale();
     }
 
     public void TurnLeft()
@@ -68,8 +68,8 @@ public class Rover
         Orientation = (Orientation)(((int)Orientation + 1) % 4);
     }
 
-    // Gestion toroïdale
-    private void AdjustForTorus()
+    
+    private void Toroidale()
     {
         if (Position.X < 0)
             Position.X = _planetWidth - 1;
