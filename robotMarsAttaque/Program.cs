@@ -1,7 +1,5 @@
 ﻿using robotMarsAttaque;
 using robotMarsAttaque.Class;
-using System;
-using System.Collections.Generic;
 
 public class Program
 {
@@ -24,7 +22,7 @@ public class Program
         {
             Console.Write("Enter command: ");
             char input = Char.ToUpper(Console.ReadKey().KeyChar);
-            Console.WriteLine();  // Move to the next line for clearer console output.
+            Console.WriteLine();
 
             switch (input)
             {

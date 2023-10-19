@@ -1,6 +1,7 @@
 ﻿using robotMarsAttaque;
 using robotMarsAttaque.Class;
 
+// Navigator Class: Handles the movement logic based on the rover's current state.
 public class Navigator
 {
     private readonly Planet _planet;
@@ -33,7 +34,7 @@ public class Navigator
 
         if (_planet.HasObstacleAt(nextPosition))
         {
-            return currentPosition; // Return current position if an obstacle is found
+            return currentPosition;
         }
 
         return nextPosition;

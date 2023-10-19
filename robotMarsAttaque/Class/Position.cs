@@ -1,6 +1,6 @@
-﻿using System;
-namespace robotMarsAttaque;
+﻿namespace robotMarsAttaque;
 
+// Position Class: Represents the position (X, Y) on the planet grid.
 public class Position
 {
     public int X { get; set; }
@@ -12,4 +12,5 @@ public class Position
         Y = y;
     }
 }
+
 

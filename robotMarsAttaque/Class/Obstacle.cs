@@ -1,12 +1,12 @@
-﻿namespace robotMarsAttaque
-{
-    public class Obstacle
-    {
-        public Position Position { get; }
+﻿using robotMarsAttaque;
 
-        public Obstacle(int x, int y)
-        {
-            Position = new Position(x, y);
-        }
+// Obstacle Class: Represents an obstacle's position.
+public class Obstacle
+{
+    public Position Position { get; }
+
+    public Obstacle(int x, int y)
+    {
+        Position = new Position(x, y);
     }
 }
