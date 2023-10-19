@@ -36,10 +36,10 @@ public class Program
                     rover.ExecuteCommand(Command.Reverse);
                     break;
                 case 'L':
-                    rover.Equals(Command.TurnLeft);
+                    rover.ExecuteCommand(Command.TurnLeft);
                     break;
                 case 'T':
-                    rover.Equals(Command.TurnRight);
+                    rover.ExecuteCommand(Command.TurnRight);
                     break;
                 case 'Q':
                     Console.WriteLine("Exiting...");
