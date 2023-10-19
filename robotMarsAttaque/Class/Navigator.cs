@@ -12,22 +12,30 @@ public class Navigator
 
     public Position Move(Position currentPosition, Orientation orientation, bool reverse = false)
     {
+        Position nextPosition = new Position(currentPosition.X, currentPosition.Y);
         switch (orientation)
         {
             case Orientation.N:
-                currentPosition.Y += reverse ? -1 : 1;
+                nextPosition.Y += reverse ? -1 : 1;
                 break;
             case Orientation.E:
-                currentPosition.X += reverse ? -1 : 1;
+                nextPosition.X += reverse ? -1 : 1;
                 break;
             case Orientation.S:
-                currentPosition.Y += reverse ? 1 : -1;
+                nextPosition.Y += reverse ? 1 : -1;
                 break;
             case Orientation.W:
-                currentPosition.X += reverse ? 1 : -1;
+                nextPosition.X += reverse ? 1 : -1;
                 break;
         }
 
-        return _planet.AdjustPosition(currentPosition);
+        nextPosition = _planet.AdjustPosition(nextPosition);
+
+        if (_planet.HasObstacleAt(nextPosition))
+        {
+            return currentPosition; // Return current position if an obstacle is found
+        }
+
+        return nextPosition;
     }
 }

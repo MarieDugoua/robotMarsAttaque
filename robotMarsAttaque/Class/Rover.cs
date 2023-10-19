@@ -1,45 +1,65 @@
-﻿using System;
-namespace robotMarsAttaque.Class;
-
-public class Rover
+﻿namespace robotMarsAttaque.Class
 {
-    public Position Position { get; private set; }
-    public Orientation Orientation { get; private set; }
-
-    private readonly Navigator _navigator;
-
-    public Rover(Position initialPosition, Orientation orientation, Navigator navigator)
+    public class Rover
     {
-        Position = initialPosition;
-        Orientation = orientation;
-        _navigator = navigator;
-    }
+        public Position Position { get; private set; }
+        public Orientation Orientation { get; private set; }
 
-    public void Advance()
-    {
-        Position = _navigator.Move(Position, Orientation);
-    }
+        private readonly Navigator _navigator;
 
-    public void Reverse()
-    {
-        Position = _navigator.Move(Position, Orientation, true);
-    }
+        public Rover(Position initialPosition, Orientation orientation, Navigator navigator)
+        {
+            Position = initialPosition;
+            Orientation = orientation;
+            _navigator = navigator;
+        }
 
-    // 90° to the left
-    public void TurnLeft()
-    {
-        Orientation = (Orientation)(((int)Orientation + 3) % 4);
-    }
+        public void ExecuteCommand(Command command)
+        {
+            switch (command)
+            {
+                case Command.Advance:
+                    Position = _navigator.Move(Position, Orientation);
+                    break;
+                case Command.Reverse:
+                    Position = _navigator.Move(Position, Orientation, true);
+                    break;
+                case Command.TurnLeft:
+                    TurnLeft();
+                    break;
+                case Command.TurnRight:
+                    TurnRight();
+                    break;
+            }
+        }
 
-    // 90° to the right
-    public void TurnRight()
-    {
-        Orientation = (Orientation)(((int)Orientation + 1) % 4);
-    }
+        private void TurnLeft()
+        {
+            Orientation = (Orientation)(((int)Orientation + 3) % 4);
+        }
 
-    public override string ToString()
-    {
-        return $"Position: ({Position.X}, {Position.Y}), Orientation: {Orientation}";
+        private void TurnRight()
+        {
+            Orientation = (Orientation)(((int)Orientation + 1) % 4);
+        }
+
+        public override string ToString()
+        {
+            return $"Position: ({Position.X}, {Position.Y}), Orientation: {Orientation}";
+        }
+
+        public string ExecuteCommands(IEnumerable<Command> commands)
+        {
+            foreach (var command in commands)
+            {
+                var previousPosition = new Position(Position.X, Position.Y);
+                ExecuteCommand(command);
+                if (Position.Equals(previousPosition) && command == Command.Advance)
+                {
+                    return $"Obstacle encountered at ({Position.X}, {Position.Y}). Stopping execution.";
+                }
+            }
+            return $"Executed all commands. Current state: {ToString()}";
+        }
     }
 }
-
