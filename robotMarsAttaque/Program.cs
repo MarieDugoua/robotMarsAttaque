@@ -21,30 +21,35 @@ public class Program
         while (true)
         {
             Console.Write("Enter command: ");
-            char input = Char.ToUpper(Console.ReadKey().KeyChar);
+
+            string input = Console.ReadLine().ToUpper();
             Console.WriteLine();
-
-            switch (input)
+            string[] commande;
+            commande=input.Split(" ",StringSplitOptions.RemoveEmptyEntries);
+            foreach (string lettre in commande)
             {
-                case 'A':
-                    rover.ExecuteCommand(Command.Advance);
+                switch (lettre)
+                {
+                    case "A":
+                        rover.ExecuteCommand(Command.Advance);
 
-                    break;
-                case 'R':
-                    rover.ExecuteCommand(Command.Reverse);
-                    break;
-                case 'L':
-                    rover.ExecuteCommand(Command.TurnLeft);
-                    break;
-                case 'T':
-                    rover.ExecuteCommand(Command.TurnRight);
-                    break;
-                case 'Q':
-                    Console.WriteLine("Exiting...");
-                    return;
-                default:
-                    Console.WriteLine("Invalid command. Please try again.");
-                    continue;
+                        break;
+                    case "R":
+                        rover.ExecuteCommand(Command.Reverse);
+                        break;
+                    case "L":
+                        rover.ExecuteCommand(Command.TurnLeft);
+                        break;
+                    case "T":
+                        rover.ExecuteCommand(Command.TurnRight);
+                        break;
+                    case "Q":
+                        Console.WriteLine("Exiting...");
+                        return;
+                    default:
+                        Console.WriteLine("Invalid command. Please try again.");
+                        continue;
+                }
             }
 
             Console.WriteLine($"Current State: {rover}");
