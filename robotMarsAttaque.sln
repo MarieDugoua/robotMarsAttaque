@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1706.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotMarsAttaque", "robotMarsAttaque\robotMarsAttaque.csproj", "{6465CAB1-FC0B-4EDC-B3F5-AAFC80710968}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "robotMarsAttaqueTest", "robotMarsAttaqueTest\robotMarsAttaqueTest.csproj", "{EEF5733A-65E4-44C2-8FB8-B99C1F12DC45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6465CAB1-FC0B-4EDC-B3F5-AAFC80710968}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6465CAB1-FC0B-4EDC-B3F5-AAFC80710968}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6465CAB1-FC0B-4EDC-B3F5-AAFC80710968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEF5733A-65E4-44C2-8FB8-B99C1F12DC45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEF5733A-65E4-44C2-8FB8-B99C1F12DC45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEF5733A-65E4-44C2-8FB8-B99C1F12DC45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEF5733A-65E4-44C2-8FB8-B99C1F12DC45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
