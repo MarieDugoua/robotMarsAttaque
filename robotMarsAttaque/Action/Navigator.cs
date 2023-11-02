@@ -1,5 +1,5 @@
-﻿using robotMarsAttaque;
-using robotMarsAttaque.Class;
+﻿using robotMarsAttaque.Action;
+using robotMarsAttaque.Rover;
 
 // Navigator Class: Handles the movement logic based on the rover's current state.
 public class Navigator

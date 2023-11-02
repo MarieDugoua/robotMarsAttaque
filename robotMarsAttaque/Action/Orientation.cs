@@ -1,4 +1,4 @@
-﻿namespace robotMarsAttaque.Class;
+﻿namespace robotMarsAttaque.Action;
 
 // Orientation Enum: Represents the direction in which the rover is facing.
 public enum Orientation

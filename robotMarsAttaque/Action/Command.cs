@@ -1,4 +1,4 @@
-﻿namespace robotMarsAttaque.Class
+﻿namespace robotMarsAttaque.Action
 {
     // Command Enum: Represents the possible commands for the rover.
     public enum Command

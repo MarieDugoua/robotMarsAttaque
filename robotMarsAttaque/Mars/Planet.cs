@@ -1,4 +1,4 @@
-﻿using robotMarsAttaque;
+﻿using robotMarsAttaque.Rover;
 
 // Planet Class: Represents the planet's grid and obstacles.
 public class Planet

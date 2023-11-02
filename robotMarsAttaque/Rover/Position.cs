@@ -1,4 +1,4 @@
-﻿namespace robotMarsAttaque;
+﻿namespace robotMarsAttaque.Rover;
 
 // Position Class: Represents the position (X, Y) on the planet grid.
 public class Position

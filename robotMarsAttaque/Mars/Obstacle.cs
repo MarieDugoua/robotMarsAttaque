@@ -1,4 +1,4 @@
-﻿using robotMarsAttaque;
+﻿using robotMarsAttaque.Rover;
 
 // Obstacle Class: Represents an obstacle's position.
 public class Obstacle

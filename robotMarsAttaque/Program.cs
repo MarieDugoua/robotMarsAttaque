@@ -1,5 +1,5 @@
-﻿using robotMarsAttaque;
-using robotMarsAttaque.Class;
+﻿using robotMarsAttaque.Action;
+using robotMarsAttaque.Rover;
 
 public class Program
 {
