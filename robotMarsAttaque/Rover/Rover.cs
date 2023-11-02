@@ -1,5 +1,6 @@
 ﻿using robotMarsAttaque.Action;
 using robotMarsAttaque.Rover;
+namespace robotMarsAttaque.Rover;
 
 // Rover Class: Represents the rover and handles its movement based on received commands.
 public class Rover
